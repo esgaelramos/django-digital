@@ -1,0 +1,95 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    My Education
+{% endblock %}
+
+
+{% block content %}
+    Hola
+    <div class="searcher">
+        <form method="GET">
+            <div class="input-grup">
+                <input type="text" placeholder="¿Qué tema buscas?" name="search">
+                <button type="submit"> 
+                    Buscar
+                </button>
+            </div>
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    Lo que buscaste
+    <br>
+    {% if searchList %}
+        SEXY BEBE
+        {% for lesson in searchList %}
+
+            {{ lesson.subject }}
+            {{ lesson.topic }}
+            {{ lesson.lesson_number }}
+            {{ lesson.title }}
+            {{ lesson.subtitle }}
+            {{ lesson.description }}
+            {{ lesson.level }}
+            {{ lesson.status }}
+            {{ lesson.slug }}
+            {{ lesson.is_active }}
+        
+        {% endfor %}
+    {% endif %}
+    Fin de lo que buscaste
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    Topics
+    <br>
+    {% for topic in topicList %}
+
+        {{ topic.subject }}
+        <br>
+        {% for human in topic.humans.all %}
+            {{ human }}
+        {% endfor %} | 
+        <br>
+            {{ topic.humans.all|join:", " }}
+        <br>
+        {{ topic.title }}
+        {{ topic.subtitle }}
+        <img src="{{ topic.thumbnai.url }}" alt="">
+
+        {{ topic.level }}
+        {{ topic.slug }}
+        {{ topic.is_complete }}
+    
+    {% endfor %}
+    <br>
+    <br>
+    <br>
+
+    Lessons
+    <br>
+    {% for lesson in lessonList %}
+
+        {{ lesson.subject }}
+        {{ lesson.topic }}
+        {{ lesson.lesson_number }}
+        {{ lesson.title }}
+        {{ lesson.subtitle }}
+        {{ lesson.description }}
+        {{ lesson.content }}
+        {{ lesson.content|safe }}
+        {{ lesson.level }}
+        {{ lesson.status }}
+        {{ lesson.slug }}
+        {{ lesson.is_active }}
+        
+    {% endfor %}
+
+{% endblock %}

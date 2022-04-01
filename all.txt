@@ -1,0 +1,20 @@
+        {% for human in topic.humans.all %}
+            {{ human }}
+        {% endfor %} | 
+        {% comment %} NOT WORK!!! {% endcomment %}
+        {{ topic.humans }} 
+        {% comment %} NOT WORK!!! {% endcomment %}
+---
+        <br>
+        {% for human in topic.humans.all %}
+            {{ human }}
+        {% endfor %} | 
+        <br>
+            {{ topic.humans.all|join:", " }}
+        <br>
+---
+        <img src="{{ topic.thumbnail.url }}" alt="">
+---
+        {{ lesson.content }}
+        {{ lesson.content|safe }}
+---

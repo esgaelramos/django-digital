@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    {% comment %} --- STYLES ---- {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    {% comment %} --- FONTS ---- {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    {% comment %} --- NAVBAR INCLUDE ---- {% endcomment %}
+    {% include 'partials/_navbar.html' %}
+
+    {% comment %} --- BLOCK CONTENT ---- {% endcomment %}
+    <main>
+        {% block content %}
+        {% endblock %}
+        
+        <br><br><br><br>
+        {% comment %} --- INDEX INCLUDE ---- {% endcomment %}
+        {% include 'partials/_index.html' %}
+    </main>
+
+    {% comment %} --- FOOTER INCLUDE ---- {% endcomment %}
+    {% include 'partials/_footer.html' %}
+    
+    {% comment %} --- JAVASCRIPT ---- {% endcomment %}
+    <script src="{% static 'js/vue.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,435 @@
+/* **************************************************
+    PRINCIPAL STYLES 
+************************************************* **/
+:root{
+    --background-color: #E2FFDB;
+    --highlight-color: #F0DBCE;
+    --highlight2-color: #d8c9c0;
+    --extralight-color: #786D67;
+    --primary-color: #CED4F0;
+    --header-color: #A1E6CD;
+    --body-color: #000000;
+    --api-color: #237255;
+    --link-edit-color: #036468;
+}
+body{
+    background-color: var(--background-color);
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.19;
+    font-size: 19px;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+/* **************************************************
+    HEADER CONTACT 
+************************************************* **/
+header{
+    height: 60px;
+}
+.header__container{
+    display: inline-flex;
+    justify-content: space-between;
+    background-color: var(--header-color);
+    width: 100%;
+    height: 50px;
+}
+.header-title{
+    margin: auto 4vw;
+    font-size: 30px;
+}
+.header-title a span{
+    color: var(--extralight-color);
+    font-weight: bold;
+}
+.header-title a span:hover{
+    color: var(--body-color);
+    text-decoration: underline;
+}
+/* --- MENU STATUS --- */
+.header-menu{
+    display: none;
+}
+#menu-mobile-options{
+    display: none;
+}
+#menu-pc-options{
+    display: flex;
+}
+/* --- MOBILE MENU --- */
+.header-menu{
+    text-align: end;
+}
+#menu-mobile-options{
+    display: none;
+    background-color: var(--background-color);
+    position: absolute;
+    top: 50px;
+    left: 0%;
+    min-width: 100vw;
+    animation: showNavbar 0.7s ease 0s 1 normal none;
+    animation-fill-mode: forwards;
+}
+.option-item{
+    text-align: center;
+    font-size: 20px;
+    list-style: none;
+    line-height: 1.7;
+}
+.option-item a{
+    color: var(--extralight-color);
+}
+.option-item a:hover{
+    color: var(--body-color);
+    text-decoration: underline;
+} 
+/* --- COMPUTER MENU --- */
+.option-item-pc{
+    list-style: none;
+    margin: auto;
+    padding: 10px 15px;
+    font-size: 20px;
+}
+.option-item-pc a{
+    color: var(--extralight-color);
+}
+.option-item-pc a:hover{
+    color: var(--body-color);
+    text-decoration: underline;
+}
+/* --- HAMBURGER MENU --- */
+#header_navbar{
+    position: fixed;
+    transition: top 1.3s;
+    z-index: 100;
+}
+#navbar-button{
+    height: 50px;
+    width: 200px;
+    margin: 6px;
+}
+#navbar-button button{
+    width: 80px;
+    padding: 0;
+    background: none;
+    cursor: pointer;
+    border: 0;
+}
+#navbar-button button span{
+    border-radius: 5px;
+    background-color: var(--extralight-color);
+    display: block;
+    width: 50%;
+    margin: 5px auto;
+    height: 6px;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+/* --- HAMBURGER NAME ANIMATIONS --- */
+#navbar-button button.open .top-line{
+    animation-name: top-line-animation;
+}
+#navbar-button button.open .mid-line{
+    animation-name: mid-line-animation;
+}
+#navbar-button button.open .bottom-line{
+    animation-name: bottom-line-animation;
+}
+#navbar-button button .top-line{
+    animation-name: top-line-animation-close;
+}
+#navbar-button button .mid-line{
+    animation-name: mid-line-animation-close;
+}
+#navbar-button button .bottom-line{
+    animation-name: bottom-line-animation-close;
+}
+
+/* **************************************************
+    MAIN
+************************************************* **/
+main{
+    margin: 1rem;
+}
+/* **************************************************
+    TABLE
+************************************************* **/
+table tbody tr:nth-child(odd) {
+	background: var(--highlight-color);
+}
+table tbody tr:nth-child(even) {
+	background: var(--highlight2-color);
+}
+table thead {
+  background: #444;
+  color: #fff;
+  font-size: 18px;
+}
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+td{
+    padding: 4px 0;
+}
+.center-table{
+    text-align: center;
+}
+#code-table{
+    padding-left: 17px;
+}
+#table-book a{
+    color: var(--body-color);
+    text-decoration: underline;
+}
+#api-table a{
+    color: var(--link-edit-color);
+}
+#api-table a:hover{
+    color: var(--link-edit-color);
+    text-decoration: underline;
+}
+.link-edit{
+    padding: 0 7px;
+}
+.link-edit a{
+    color: var(--link-edit-color);
+}
+#delete-link a{
+    color: #ff2525;
+}
+.visibility-responsive{
+    display: block;
+}
+#api-link a{
+    color: var(--api-color);
+    text-decoration: underline;
+}
+
+/* **************************************************
+    BLOG CONTAINER
+************************************************* **/
+.blog-container{
+    margin: 2rem;
+}
+
+
+/* **************************************************
+    BOOKS DETAILS CONTAINER
+************************************************* **/
+.books_container{
+    margin: 1rem;
+}
+.books_container h1{
+    line-height: 0.79;
+}
+.books_container h2{
+    line-height: 0.74;
+}
+.books_container h3{
+    line-height: 0.7;
+}
+
+/* **************************************************
+    CONTACT DETAILS CONTAINER
+************************************************* **/
+.contact_container{
+    margin: 1rem;
+}
+.contact_container h1{
+    line-height: 0.99;
+}
+.contact_container h2{
+    line-height: 0.94;
+}
+.contact_container h3{
+    line-height: 0.9;
+}
+.contacts-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contact-container{
+    margin: 10px;
+    padding: 4px;
+    outline: 2px solid var(--api-color);
+    border-radius: 3px;
+}
+.contact-container span{
+    font-size: 30px;
+    position: relative;
+    top: -22px;
+    left: 10px;
+}
+.contact-container a{
+    color: var(--link-edit-color);
+}
+/* **************************************************
+    SEARCHER
+************************************************* **/
+.input-grup{
+    text-align: right;
+    margin-right: 20px;
+    margin-bottom: -65px;
+}
+.input-grup input{
+    width: 300px;
+}
+
+/* **************************************************
+    CONTACT
+************************************************* **/
+
+
+/* **************************************************
+    FOOTER
+************************************************* **/
+footer{
+    height: 70px;
+    background-color: var(--extralight-color);
+    color: var(--primary-color);
+}
+.footer-final{
+    text-align: center;
+    padding: 25px;
+}
+
+/* **************************************************
+    ANIMATIONS 
+************************************************* **/
+/* --- HAMBURGER MENU HEADER --- */
+@keyframes top-line-animation{
+    0%, 100%{
+        position: relative;
+        top: 10px
+    }
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(6px) rotate(-315deg);
+    }
+}
+@keyframes bottom-line-animation{
+    0%, 100%{
+        position: relative;
+        top: 10px
+    }
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(-6px) rotate(315deg);
+    }
+}
+@keyframes mid-line-animation{
+    20%, 100%{
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+}
+@keyframes top-line-animation-close{
+    0%{
+        margin: 0 auto;
+        transform: translateY(6px) rotate(-315deg);
+    }
+    30%, 100%{
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+@keyframes bottom-line-animation-close{
+    0%{
+        margin: 0 auto;
+        transform: translateY(-6px) rotate(315deg);
+    }
+    30%, 100%{
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+@keyframes mid-line-animation-close{
+    0%{
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+    10%, 100%{
+        margin: 0 auto;
+        width: 60%;
+        opacity: 1;
+    }
+}
+/* --- ||| END HAMBURGER MENU ||| --- */
+
+/* --- H --- */
+
+
+/* **************************************************
+    RESPONSIVE 
+************************************************* **/
+/* --- 900PX --- */
+@media (max-width: 900px){
+    /* --- VISIBILITY --- */
+    .visibility-responsive{
+        display: none;
+    }
+}
+
+/* --- 800PX --- */
+@media (max-width: 800px){
+    /* --- MENU STATUS --- */
+    .header-menu{
+        display: block;
+    }
+    #menu-mobile-options{
+        display: block;
+    }
+    #menu-pc-options{
+        display: none;
+    }
+}
+/* --- 700PX --- */
+@media (max-width: 700px){
+    body{
+        font-size: 17px;
+    }
+    /* --- BLOG CONTAINER --- */
+    .blog-container{
+        margin: 0;
+    }
+    /* --- SEARCHER --- */
+    .input-grup{
+        text-align: center;
+        margin-top: -10px;
+        margin-bottom: -5px;
+    }
+    .input-grup input{
+        width: 240px;
+    }
+    /* --- CONTACTS --- */
+    .contacts-container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+/* --- 500PX --- */
+@media (max-width: 500px){
+    .header-title a span{
+        font-size: 25px;
+    }
+    /* --- VISIBILITY --- */
+    .visibility-responsive-450{
+        display: none;
+    }
+
+    
+    
+}
+
+/* **************************************************
+    END? 
+************************************************* **/

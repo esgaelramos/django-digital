@@ -1,0 +1,37 @@
+<!-- ----------
+    HEADER    
+---------- --> 
+<header>
+    <div class="header__container" id="header_navbar">
+        <div class="header-title">
+            <a href="/"><span>EDUCATION</span></a>
+        </div>
+        <!-- --- MENU MOBILE --- -->                    
+        <div class="header-menu" id="appNav">
+            <div id="navbar-button">
+                <!-- --- BOTTON HAMBURGER --- -->                    
+                <button class="" @click="show_menu_mobile = !show_menu_mobile">                        
+                    <span class="top-line"></span>
+                    <span class="mid-line"></span>
+                    <span class="bottom-line"></span>
+                </button>
+                <!-- --- MENU OPTIONS --- -->                    
+                <div id="menu-mobile-options" v-show="show_menu_mobile">
+                    <li class="option-item"><strong><a href="/">HOME</a></strong></li>
+                    <li class="option-item"><strong><a href="/">MATHS</a></strong></li>
+                    <li class="option-item"><strong><a href="/">PHYSICS</a></strong></li>
+                    <li class="option-item"><strong><a href="/">PROGRAMMING</a></strong></li>
+                    <li class="option-item"><strong><a href="/">ENGLISH</a></strong></li>
+                </div> 
+
+            </div>
+        </div>
+        <!-- --- MENU COMPUTER --- -->                    
+        <div id="menu-pc-options">
+            <li class="option-item-pc"><strong><a href="">MATHS</a></strong></li>                        
+            <li class="option-item-pc"><strong><a href="">PHYSICS</a></strong></li>
+            <li class="option-item-pc"><strong><a href="">PROGRAMMING</a></strong></li>
+            <li class="option-item-pc"><strong><a href="">ENGLISH</a></strong></li>
+        </div>
+    </div>
+</header>
